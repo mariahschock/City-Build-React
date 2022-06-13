@@ -9,6 +9,9 @@ import CityNameInput from './CityNameInput';
 import City from './City';
 
 function App() {
+  const [castle, setCastle] = useState('Mysterious');
+  const [skyline, setSkyline] = useState('Foggy');
+  const [waterfront, setWaterfront] = useState('Sunset');
   // track some state here.
   // You'll need to keep track of a skylineId, waterfrontId, and castleId. All these start out as 1
   // you'll need to track a city name, which starts as the city name of your choice.
@@ -24,6 +27,9 @@ function App() {
       <div className='bottom'>
         {/* here, the CityNameInput component takes in the setCityName state handler function */}
         <section className='dropdowns'>
+          <CastleDropdown setCastle={ setCastle } />
+          <SkylineDropdown setSkyline={ setSkyline } />
+          <WaterfrontDropdown setWaterfront={ setWaterfront } />
           {/* 
           render all three Dropdown components (WaterfrontDropdown, SkylineDropdown, CastleDropdown) here. 
           
